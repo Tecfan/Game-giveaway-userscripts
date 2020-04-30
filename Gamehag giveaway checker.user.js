@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Gamehag giveaway checker
 // @namespace    http://tampermonkey.net/
-// @version      1.005
+// @version      1.006
 // @updateURL    https://github.com/Tecfan/gamehaggwchecker/raw/master/Gamehag%20giveaway%20checker.user.js
 // @downloadURL  https://github.com/Tecfan/gamehaggwchecker/raw/master/Gamehag%20giveaway%20checker.user.js
-// @description  Check old Gamehag giweaways if they are still active.
+// @description  Check if old Gamehag giweaways are still active.
 // @author       Tecfan
 // @match        https://gamehag.com/giveaway/*
 // @grant        none
@@ -20,9 +20,8 @@
     /* Array with all the bad giveaway pages that look like they will work, but has manually been tested to not work.
        They do not work either because it gives the error: "No more keys left", or because one of the tasks does not
        work (like joining the Gamehag Steam group), or because it's a shitty in-game item code which is not worth our time. */
-    var errorGws = [123, 125, 128, 131, 234, 258, 295, 321, 338, 343, 353, 365, 533, 535, 541, 549, 553, 554,
-                    584, 586, 588, 636, 670, 692, 693, 696, 705, 712, 716, 718, 719, 733, 744, 748, 777, 785,
-                    792];
+    var errorGws = [123, 125, 128, 131, 234, 258, 295, 321, 338, 343, 353, 365, 533, 535, 541, 549, 553, 554, 584,
+                    586, 588, 636, 670, 692, 693, 696, 705, 712, 716, 718, 719, 733, 744, 748, 777, 785, 792];
 
     // Declaring some for loop variables because for some reason Gamehag.com doesn't allow me to declare them inside the loops in my script.
     var z = 0
@@ -41,16 +40,23 @@
         x = ++x;
     }
 
-    // A place to post error messages from this script.
-    var errorMesssageHeader = document.querySelector("div.giveaway-avatar > h1");
+    /* Insert link to next giveaway page so that you don't have to edit URL manually when the script stops.
+       Opens in new tab so that the userscript starts properly. Any other way of making sure the userscript
+       will run after a normal URL click?                                                                  */
+    document.querySelector("div.giveaway-games > h3").insertAdjacentHTML("beforebegin", `<h3 class="text-xs-center mb-3"> <a href="https://gamehag.com/giveaway/${x}" target="_blank" style="background-color: red;">Next giveaway</a></h3>`);
+
+    // A function to post error messages from this script onto the website.
+    var giveError = function(errorMessage) {
+        document.querySelector('div.giveaway-avatar > h1').insertAdjacentHTML('beforeend', `<br><span style="background-color: red; font-size: 60%;">${errorMessage}</span>`);
+        console.log(errorMessage.replace(/(<([^>]+)>)/ig, "")); // Post error message in console without HTML tags.
+    }
 
     // Place to check for the "Giveaway has ended" error message
     var gwEnded = document.querySelectorAll("div.giveaway-content > div");
 
     // Return this function when the script has reached the last giveaway.
     var endOfScript = function() {
-        console.log("You've reached an upcoming giveaway, script aborted.");
-        errorMesssageHeader.insertAdjacentHTML("beforeend", '<br><span style="background-color: red; font-size: 60%;">You\'ve reach the end.<br>Userscript aborted.<\/span>');
+        return giveError("You\'ve reach the end. <br>Userscript aborted.");
     }
 
     // Function to open the next giveaway
@@ -86,18 +92,11 @@
         }
     }// If setting is set to 0, stop the script and post a message to the user.
     else if (skipCompleted === 0) {
-        errorMesssageHeader.insertAdjacentHTML("beforeend", '<br><span style="background-color: red; font-size: 60%;">Giveaway possibly functional,<br>but you have already completed it.<br>Script stopped due to your "skipCompleted" setting.<\/span>');
-        return console.log('Giveaway possibly functional, but you have already completed it. Script stopped due to your "skipCompleted" setting.');
+        return giveError('Giveaway possibly functional, <br>but you have already completed it. <br>Script stopped due to your "skipCompleted" setting.');
     }// If it's set wrongly, return an error message an stop the script.
     else {
-        errorMesssageHeader.insertAdjacentHTML("beforeend", '<br><span style="background-color: red; font-size: 60%;">Error with "skipCompleted" variable.<br>see the first line in the userscript.<br>Value should be either "0" or "1".<\/span>');
-        return console.log('Error with "skipCompleted" variable, see the first line in the userscript. Value should be either "0" or "1"');
+        return giveError('Error with "skipCompleted" variable. <br>see the first line in the userscript. <br>Value should be either "0" or "1".');
     }
-
-    /* Insert link to next giveaway page so that you don't have to edit URL manually when the script stops.
-       Opens in new tab so that the userscript starts properly. Any other way of making sure the userscript
-       will run after a normal URL click?                                                                  */
-    document.querySelector("div.giveaway-games > h3").insertAdjacentHTML("beforebegin", `<h3 class="text-xs-center mb-3"> <a href="https://gamehag.com/giveaway/${x}" target="_blank" style="background-color: red;">Next giveaway</a></h3>`);
 
     // if there is a giveaway counter on the page, start the script
     if (document.getElementsByClassName("giveaway-counter")[0]) {
@@ -140,7 +139,9 @@
             return openNextPage();
         }
     } else {
-        return alert("Error with script or giveaway");
+        // Double error because Gamehag.com doesn't seem to allow alert()'s to go through.
+        alert("Error with script or giveaway");
+        return giveError('Undefined error with script or giveaway');
     }
 
 }
