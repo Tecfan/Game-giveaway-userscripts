@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Gamehag giveaway checker
 // @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       You
+// @version      1.0
+// @description  Check old Gamehag giweaways if they are still active.
+// @author       Tecfan
 // @match        https://gamehag.com/giveaway/*
 // @grant        none
 // ==/UserScript==
