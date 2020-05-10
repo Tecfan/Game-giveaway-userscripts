@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Gamehag giveaway checker
 // @namespace    http://tampermonkey.net/
-// @version      1.009
+// @version      1.010
 // @updateURL    https://github.com/Tecfan/Game-giveaway-userscripts/raw/master/Gamehag%20giveaway%20checker.user.js
 // @downloadURL  https://github.com/Tecfan/Game-giveaway-userscripts/raw/master/Gamehag%20giveaway%20checker.user.js
 // @description  Check if old Gamehag giweaways are still active.
@@ -20,7 +20,7 @@
     /* Array with all the bad giveaway pages that look like they will work, but has manually been tested to not work.
      They do not work either because it gives the error: "No more keys left", or because one of the tasks does not
      work (like joining the Gamehag Steam group), or because it's a shitty in-game item code which is not worth our time. */
-    var errorGws = [5, 12, 18, 52, 55, 72, 90, 94, 123, 125, 128, 130, 131, 234, 258, 295, 321, 333, 338, 343, 353, 365, 457, 533, 535, 
+    var errorGws = [5, 12, 18, 52, 55, 72, 90, 94, 123, 125, 128, 130, 131, 234, 258, 295, 321, 333, 338, 343, 353, 365, 457, 499, 533, 535, 
                    541, 549, 553, 554, 584, 586, 588, 636, 670, 692, 693, 696, 705, 712, 716, 718, 719, 733, 744, 748, 777, 785, 792];
 
     // Declaring some for loop variables because for some reason Gamehag.com doesn't allow me to declare them inside the loops in my script.
