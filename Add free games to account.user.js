@@ -173,7 +173,7 @@ var timeoutPal = (ms)=>new Promise(resolve=>setTimeout(resolve, ms));
             return await goToCheckout();
         }
         // While the number of items is less then 10 and there's actually some "Add to cart"-buttons on the page, start the main script
-        while (cartNumber() < 2 && typeof document.querySelectorAll(".grid-cell__add-to-cart-button")[nonFreeOffset] != "undefined") {
+        while (cartNumber() < 10 && typeof document.querySelectorAll(".grid-cell__add-to-cart-button")[nonFreeOffset] != "undefined") {
             i++;
             // The number of times the loop has been ran
 
@@ -192,7 +192,7 @@ var timeoutPal = (ms)=>new Promise(resolve=>setTimeout(resolve, ms));
         }
 
         // Another way of checking if there's no more "Add to cart" buttons.
-        while (cartNumber() < 2 && typeof document.querySelectorAll(".grid-cell__add-to-cart-button")[nonFreeOffset] == "undefined") {
+        while (cartNumber() < 10 && typeof document.querySelectorAll(".grid-cell__add-to-cart-button")[nonFreeOffset] == "undefined") {
             console.log('There is no more "Add to cart" buttons on this page. Sending you to the next page, as there is not yet 10 items in your cart.');
             return nextPage();
         }
