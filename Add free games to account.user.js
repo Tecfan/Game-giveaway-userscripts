@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Add free games to account
 // @namespace    http://tampermonkey.net/
-// @version      0.11
+// @version      0.12
 // @updateURL    https://github.com/Tecfan/Game-giveaway-userscripts/blob/master/Add%20free%20games%20to%20account.user.js
 // @downloadURL  https://github.com/Tecfan/Game-giveaway-userscripts/blob/master/Add%20free%20games%20to%20account.user.js
 // @description  This script will attempt to add all free items from certain stores to your account automatically.
@@ -29,6 +29,7 @@ var timeoutPal = (ms)=>new Promise(resolve=>setTimeout(resolve, ms));
     var cartItems = 0
       , nonFreeOffset = 0
       , paidPages = 0
+      , xx = 0
       , i = 0;
 
     // This function checks if we're on /checkout, /confirm or not. If not, we are on /*/grid/*, as this is the only other place the script will start.
@@ -90,6 +91,7 @@ var timeoutPal = (ms)=>new Promise(resolve=>setTimeout(resolve, ms));
             else {
                 console.log("Going to the next page.")
                 nonFreeOffset = 0;
+                xx = 0;
                 i = 0;
                 return await psLoop();
             }
@@ -107,8 +109,9 @@ var timeoutPal = (ms)=>new Promise(resolve=>setTimeout(resolve, ms));
         if (hasNumber(buyButton[nonFreeOffset].parentElement.getElementsByClassName("price-display__price")[0].innerText)) {
             nonFreeOffset++;
 
-            // If nonFreeOffset is 30, we have gone through a full page with no free items.
-            if (nonFreeOffset == 30) {
+            console.log("nonFreeOffset: " + nonFreeOffset + ", xx: " + xx);
+            // If nonFreeOffset minus number of added games is equal to or greater than 30, we have gone through a full page with no free items.
+            if ((nonFreeOffset - xx) >= 30) {
                 paidPages++;
                 console.log("paidPages incremented.");
                 console.log("paidPages: " + paidPages);
@@ -131,7 +134,11 @@ var timeoutPal = (ms)=>new Promise(resolve=>setTimeout(resolve, ms));
 
             // Reset paidPages as at least 1 free item has been found.
             paidPages = 0;
-            return console.log(`Button i (${i}) or button nonFreeOffset (${nonFreeOffset}) was clicked.`);
+
+            // Increment "xx" so that nonFreeOffset doesn't reach 30 when checking for paidPages. THIS IS NOT WORKING FOR SOME REASON.S
+            xx++;
+
+            return console.log(`Button i (${i}) or button nonFreeOffset (${nonFreeOffset}) was clicked. xx is now: (${xx})`);
         }
 
     }
@@ -194,7 +201,7 @@ var timeoutPal = (ms)=>new Promise(resolve=>setTimeout(resolve, ms));
         // Another way of checking if there's no more "Add to cart" buttons.
         while (cartNumber() < 10 && typeof document.querySelectorAll(".grid-cell__add-to-cart-button")[nonFreeOffset] == "undefined") {
             console.log('There is no more "Add to cart" buttons on this page. Sending you to the next page, as there is not yet 10 items in your cart.');
-            return nextPage();
+            return await nextPage();
         }
 
         // Wait 1 seconds after the loop is finished (why? test).
@@ -280,7 +287,12 @@ var timeoutPal = (ms)=>new Promise(resolve=>setTimeout(resolve, ms));
 
     // Actual code execution starts here
     // Insert a box with information on the page. Move this into some function?
-    document.querySelector("#vsf-root").insertAdjacentHTML("beforeend", '<div style="z-index: 9999; width: 350px; height: 210px; display: flow-root; background-color: white; position: absolute; top: 200px !important; left: 200px !important; left: 300px; box-shadow: inset 0 0 10px #000000; padding-top: 20px;"><p style="margin: 10px; text-align: center; font-size: 0.8em; color: black ">If you see this box, it means that the "Add free games to account" userscript is running. If you do not want to run this script, disable it in Tampermonkey / Greasemonkey and refresh the tab, otherwise it will run automatically every time you visit the browse page.<br><br>Please open Console if you want to see what the script is doing and to verify that it is working.</p></div>');
+    document.querySelector("#vsf-root").insertAdjacentHTML("beforeend", '<div style="z-index: 9999; width: 350px; height: 210px; display: flow-root; background-color: white; position: absolute; top: 200px !important; left: 200px !important; left: 300px; box-shadow: inset 0 0 10px #000000; padding-top: 20px;"><p style="margin: 10px; text-align: center; font-size: 0.8em; color: black ">If you see this box, it means that the "Add free games to account" userscript is running. If you do not want to run this script, disable it in Tampermonkey / Greasemonkey and refresh the tab, otherwise it will run automatically every time you visit the browse page.<br><br>Please open Console if you want to see what the script is doing and to verify that it is working.</p><p><button id="pannekake" style="background-color: #4CAF50; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;" onclick="return false">Start adding free things</button></p> </div>');
+
+
+    document.getElementById ("pannekake").addEventListener (
+    "click", psLoop, false
+);
 
     // Start the script based on what URL we are on.
     if (whereAreWe() == "checkout") {
@@ -288,7 +300,7 @@ var timeoutPal = (ms)=>new Promise(resolve=>setTimeout(resolve, ms));
     } else if (whereAreWe() == "confirm") {
         return await confrm();
     } else {
-        return await psLoop();
+        console.log("Awaiting start button clicking.");
     }
 }
 )();
