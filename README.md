@@ -24,9 +24,10 @@ Todo list:
 - Make option to stop script on items that are "Free" but with no buy button. Recommend that you run the script with option off the first time, and on the second time.
 - Upgrade js from 2008 style js to 2020 (let, not var, etc)
 
-## How to run it
-1. Go to [https://store.playstation.com/](https://store.playstation.com/).
-2. Select something to browse for in the left menu ("All Games" for example)
-3. The script will start automatically after about 7–8 seconds.
+### How to run it
+1. Go to [https://store.playstation.com/](https://store.playstation.com/) and be logged in.
+2. Select something to browse for in the left menu ("Add-Ons" for example)
+3. Select "See all" in the bottom left menu, and a /grid browsing page with about 17 000 addons should appear.
+4 The script will start automatically after about 7–8 seconds.
 
 You should sort the store by "Price (Low-High)" for the script to be more effective. If you not have time to change this order before the script starts, disable the script, set the correct order, then activate the script in TamperMonkey and reload the page.
