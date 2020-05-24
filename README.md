@@ -14,6 +14,7 @@ Do you want to add every single game, demo, DLC etc. to your account? This scrip
 - Not tested in all geographical locations
 - No user interface
 - Not yet possible to automatically add free demos and items where the buy button is missing from the browse page (working on it)
+- Not all apps are reachable via /grid browsing, some are only accessible from game pages.
 
 Before you run it you should know that I do not take any responsibility for whatever happens when you run this script. I do not know if this is against Sony's EULA. As a precaution you should also remove all payment methods from your account – the script will not continue if it sees that there is something non-free in your basket, but you can never be too sure as this is a fully automatic bot.
 
