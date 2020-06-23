@@ -1,4 +1,4 @@
-Please note: I learned some JavaScript back in high school around 2010, so my code is using oudated functions and methods and is generally not very effective nor beautiful. However, all my scripts should work with very few issues. If you want to improve them, please do.
+Please note: I learned some JavaScript back in high school around 2010, so my code is using outdated functions and methods and is generally not very effective nor beautiful. However, all my scripts should work with very few issues. If you want to improve them, please do.
 
 # Add free games to account
 Do you want to add every single game, demo, DLC etc. to your account? This script will help you do exactly that. Starting with the Playstation Store, this script will browse through all the store pages and every single working free demo, avatar, theme, DLC, game and more to your account. This is version 0.1 and it has some issues, including, but not limited to:
