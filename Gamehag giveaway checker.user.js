@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Gamehag giveaway checker
 // @namespace    http://tampermonkey.net/
-// @version      1.010
+// @version      1.011
 // @updateURL    https://github.com/Tecfan/Game-giveaway-userscripts/raw/master/Gamehag%20giveaway%20checker.user.js
 // @downloadURL  https://github.com/Tecfan/Game-giveaway-userscripts/raw/master/Gamehag%20giveaway%20checker.user.js
 // @description  Check if old Gamehag giweaways are still active.
