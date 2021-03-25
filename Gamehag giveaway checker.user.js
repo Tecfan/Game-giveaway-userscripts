@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Gamehag giveaway checker
 // @namespace    http://tampermonkey.net/
-// @version      1.011
+// @version      1.012
 // @updateURL    https://github.com/Tecfan/Game-giveaway-userscripts/raw/master/Gamehag%20giveaway%20checker.user.js
 // @downloadURL  https://github.com/Tecfan/Game-giveaway-userscripts/raw/master/Gamehag%20giveaway%20checker.user.js
 // @description  Check if old Gamehag giweaways are still active.
@@ -23,7 +23,7 @@
     var errorGws = [5, 12, 18, 52, 55, 72, 90, 94, 123, 125, 128, 130, 131, 234, 258, 295, 321, 333, 338, 343, 353,
                     365, 457, 499, 533, 535, 541, 549, 553, 554, 584, 586, 588, 636, 670, 692, 693, 696, 705, 712,
                     716, 718, 719, 733, 744, 748, 777, 785, 792, 875, 883, 893, 906, 919, 937, 941, 945, 955, 960, 
-                    970, 993, 1014, 1021, 1024, 1030, 1031];
+                    970, 993, 1014, 1021, 1024, 1030, 1031, 1039, 1042, 1044, 1059, 1068, 1082, 1083];
 
     // Declaring some for loop variables because for some reason Gamehag.com doesn't allow me to declare them inside the loops in my script.
     var z = 0
