@@ -2,7 +2,7 @@
 /* !important's since it's for a userscript */
 
 .tectable {
-	font-size: 0.75em;
+	font-size: 0.75em !important;
 	width: 100% !important;
 	border: thin solid !important;
 }
@@ -49,154 +49,154 @@
 }
 
 .clipboardbutton {
-	border: none;
-	color: white;
-	padding: 5px 26px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	opacity: 0.8;
-	margin: 2px 1px;
-	cursor: pointer;
-	position: relative;
-	top: 50%;
-	left: 40%;
+	border: none !important;
+	color: white !important;
+	padding: 5px 26px !important;
+	text-align: center !important;
+	text-decoration: none !important;
+	display: inline-block !important;
+	opacity: 0.8 !important;
+	margin: 2px 1px !important;
+	cursor: pointer !important;
+	position: relative !important;
+	top: 50% !important;
+	left: 40% !important;
 }
 
 .clipboardbutton2 {
-	border: none;
-	color: white;
-	padding: 4px 15px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	opacity: 0.8;
-	cursor: pointer;
-	position: relative;
-	top: 50%;
-	left: 30%;
+	border: none !important;
+	color: white !important;
+	padding: 4px 15px !important;
+	text-align: center !important;
+	text-decoration: none !important;
+	display: inline-block !important;
+	opacity: 0.8 !important;
+	cursor: pointer !important;
+	position: relative !important;
+	top: 50% !important;
+	left: 30% !important;
 }
 
 .clipboardbutton3 {
-	border: none;
-	color: white;
-	padding: 10px 16px;
-	text-align: center;
+	border: none !important;
+	color: white !important;
+	padding: 10px 16px !important;
+	text-align: center !important;
 	text-decoration: none;
-	display: inline-block;
-	opacity: 0.8;
-	margin: 2px 1px;
-	font-size: 0.8em;
-	cursor: pointer;
+	display: inline-block !important;
+	opacity: 0.8 !important;
+	margin: 2px 1px !important;
+	font-size: 0.8em !important;
+	cursor: pointer !important;
 }
 
 .red {
-	background-color: red;
+	background-color: red !important;
 }
 
 .black {
-	background-color: black;
+	background-color: black !important;
 }
 
 .green {
-	background-color: green;
+	background-color: green !important;
 }
 
 .restartbutton1 {
-	position: absolute;
-	top: 70px;
-	right: 150px;
-	width: 100px;
-	height: 25px;
-	background-color: black;
-	z-index: 1000;
-	text-align: center;
-	cursor: pointer;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border: 1px dotted black;
+	position: absolute !important;
+	top: 70px !important;
+	right: 150px !important;
+	width: 100px !important;
+	height: 25px !important;
+	background-color: black !important;
+	z-index: 1000 !important;
+	text-align: center !important;
+	cursor: pointer !important;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	border: 1px dotted black !important;
 }
 
 .restartbutton2 {
-	background-color: black;
-	border: none;
-	color: white;
-	padding: 5px 26px;
-	text-align: center;
-	text-decoration: none;
-	opacity: 0.8;
-	margin: 2px 300px;
-	cursor: pointer;
-	position: relative;
-	top: 50%;
-	left: 20%;
+	background-color: black !important;
+	border: none !important;
+	color: white !important;
+	padding: 5px 26px !important;
+	text-align: center !important;
+	text-decoration: none !important;
+	opacity: 0.8 !important;
+	margin: 2px 300px !important;
+	cursor: pointer !important;
+	position: relative !important;
+	top: 50% !important;
+	left: 20% !important;
 }
 
 .restartbutton3 {
-	position: absolute;
-	top: 118px;
-	right: 150px;
-	width: 100px;
-	height: 25px;
-	background-color: black;
-	z-index: 1000;
-	text-align: center;
-	cursor: pointer;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border: 1px dotted white;
-	padding: 15px 1px;
+	position: absolute !important;
+	top: 9rem !important;
+	right: 150px !important;
+	width: 100px !important;
+	height: 25px !important;
+	background-color: black !important;
+	z-index: 1000 !important;
+	text-align: center !important;
+	cursor: pointer !important;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	border: 1px dotted white !important;
+	padding: 15px 1px !important;
 }
 
 .restartbutton4 {
-	background-color: black;
-	border: none;
-	color: white;
-	padding: 5px 26px;
-	text-align: center;
-	text-decoration: none;
-	opacity: 0.8;
-	margin: 2px 1px;
-	cursor: pointer;
-	position: relative;
-	top: 50%;
-	left: 40%;
+	background-color: black !important;
+	border: none !important;
+	color: white !important;
+	padding: 5px 26px !important;
+	text-align: center !important;
+	text-decoration: none !important;
+	opacity: 0.8 !important;
+	margin: 2px 1px !important;
+	cursor: pointer !important;
+	position: relative !important;
+	top: 50% !important;
+	left: 40% !important;
 }
 
 .platformbutton {
-	background-color: black;
-	border: none;
-	color: white;
-	padding: 10px 16px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	opacity: 0.8;
-	margin: 2px 15px;
-	font-size: 0.8em;
-	cursor: pointer;
+	background-color: black !important;
+	border: none !important;
+	color: white !important;
+	padding: 10px 16px !important;
+	text-align: center !important;
+	text-decoration: none !important;
+	display: inline-block !important;
+	opacity: 0.8 !important;
+	margin: 2px 15px !important;
+	font-size: 0.8em !important;
+	cursor: pointer !important;
 }
 
 .tectraverser {
-	text-align: center;
-	width: 100%;
+	text-align: center !important;
+	width: 100% !important;
 }
 
 .tectraverser a {
-	font-size: 16px;
+	font-size: 16px !important;
 }
 
 .quantitycalculation button {
-	width: 24%;
+	width: 24% !important;
 	-webkit-appearance: none !important;
-	border: 3px solid #FD5E0F;
-	background-color: #FD5E0F;
-	font-family: 'Ropa Sans';
-	font-size: 14px;
-	color: #202020;
-	font-weight: 500;
-	outline: none;
-	border-radius: 0px;
+	border: 3px solid #FD5E0F !important;
+	background-color: #FD5E0F !important;
+	font-family: 'Ropa Sans' !important;
+	font-size: 14px !important;
+	color: #202020 !important;
+	font-weight: 500 !important;
+	outline: none !important;
+	border-radius: 0px !important;
 }
