@@ -3,7 +3,3 @@
 .tectable tr td:not(:first-of-type) { 
   font-weight: lighter;
 }
-
-.tectable tr:nth-child(even) {
-  background-color: #4a4848;
-}
