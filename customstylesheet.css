@@ -1,4 +1,5 @@
-.new-animation {
-  line-height:150px !important;
-  font-size: 400px !important;
+/* CSS for a super secret project */
+
+.lighter {
+  font-weight: lighter;
 }
