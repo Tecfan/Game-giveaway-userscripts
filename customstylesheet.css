@@ -40,5 +40,36 @@
 
 .juicerlinks {
   color: LightSkyBlue !important;
-  text-decoration: underline;
+  text-decoration: underline !important;
+}
+
+.bad {
+  color: red !important;
+}
+
+.clipboardbutton {
+  border: none; 
+  color: white;
+  padding: 5px 26px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block;
+  opacity: 0.8;
+  margin: 2px 1px; 
+  cursor: pointer;
+  position: relative; 
+  top: 50%; 
+  left: 40%;
+}
+
+.red {
+  background-color: red;
+}
+
+.black {
+  background-color: black;
+}
+
+.green {
+  background-color: green;
 }
