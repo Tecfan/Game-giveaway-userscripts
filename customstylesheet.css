@@ -1,9 +1,39 @@
 /* CSS for a super secret project */
+/* !important's since it's for a userscript */
+
+.tectable {
+  font-size: 0.75em;
+  width: 100% !important;
+  border: thin solid !important;
+}
+
+.tectable th {
+  text-align: center !important;
+  font-size: 1em !important;
+}
 
 .tectable tr td:not(:first-of-type) { 
-  font-weight: lighter;
+  font-weight: lighter !important;
 }
 
 .tectable tr:hover {
-  background-color: #4a4848;
+  background-color: #4a4848 !important;
+}
+
+.disabledlink {
+  text-decoration: line-through !important;
+}
+
+.tecvisited:visited {
+  color: #551A8B !important;
+}
+
+.gemcalculator {
+  background-color: black !important;
+  z-index: 1000 !important;
+  cursor: pointer !important;
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border: 1px dotted black !important;
 }
