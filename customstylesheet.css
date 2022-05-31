@@ -166,24 +166,37 @@
 }
 
 .platformbutton {
-  background-color: black;
-  border: none;
-  color: white;
-  padding: 10px 16px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  opacity: 0.8;
-  margin: 2px 15px;
-  font-size: 0.8em;
-  cursor: pointer;
+	background-color: black;
+	border: none;
+	color: white;
+	padding: 10px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	opacity: 0.8;
+	margin: 2px 15px;
+	font-size: 0.8em;
+	cursor: pointer;
 }
 
 .tectraverser {
-  text-align: center;
-  width: 100%;
+	text-align: center;
+	width: 100%;
 }
 
 .tectraverser a {
-  font-size: 30px;
+	font-size: 16px;
+}
+
+.quantitycalculation button {
+	width: 24%;
+	-webkit-appearance: none !important;
+	border: 3px solid #FD5E0F;
+	background-color: #FD5E0F;
+	font-family: 'Ropa Sans';
+	font-size: 14px;
+	color: #202020;
+	font-weight: 500;
+	outline: none;
+	border-radius: 0px;
 }
