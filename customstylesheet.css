@@ -37,3 +37,8 @@
   align-items: center !important;
   border: 1px dotted black !important;
 }
+
+.juicerlinks {
+  color: LightSkyBlue !important;
+  text-decoration: underline;
+}
