@@ -2,74 +2,188 @@
 /* !important's since it's for a userscript */
 
 .tectable {
-  font-size: 0.75em;
-  width: 100% !important;
-  border: thin solid !important;
+	font-size: 0.75em;
+	width: 100% !important;
+	border: thin solid !important;
 }
 
 .tectable th {
-  text-align: center !important;
-  font-size: 1em !important;
+	text-align: center !important;
+	font-size: 1em !important;
 }
 
-.tectable tr td:not(:first-of-type) { 
-  font-weight: lighter !important;
+.tectable tr td:not(:first-of-type) {
+	font-weight: lighter !important;
 }
 
 .tectable tr:hover {
-  background-color: #4a4848 !important;
+	background-color: #4a4848 !important;
 }
 
 .disabledlink {
-  text-decoration: line-through !important;
+	text-decoration: line-through !important;
 }
 
 .tecvisited:visited {
-  color: #551A8B !important;
+	color: #551A8B !important;
 }
 
 .gemcalculator {
-  background-color: black !important;
-  z-index: 1000 !important;
-  cursor: pointer !important;
-  text-align: center !important;
-  justify-content: center !important;
-  align-items: center !important;
-  border: 1px dotted black !important;
+	background-color: black !important;
+	z-index: 1000 !important;
+	cursor: pointer !important;
+	text-align: center !important;
+	justify-content: center !important;
+	align-items: center !important;
+	border: 1px dotted black !important;
 }
 
 .juicerlinks {
-  color: LightSkyBlue !important;
-  text-decoration: underline !important;
+	color: LightSkyBlue !important;
+	text-decoration: underline !important;
+	font-weight: normal;
 }
 
 .bad {
-  color: red !important;
+	color: red !important;
 }
 
 .clipboardbutton {
-  border: none; 
-  color: white;
-  padding: 5px 26px; 
-  text-align: center; 
-  text-decoration: none; 
-  display: inline-block;
-  opacity: 0.8;
-  margin: 2px 1px; 
-  cursor: pointer;
-  position: relative; 
-  top: 50%; 
-  left: 40%;
+	border: none;
+	color: white;
+	padding: 5px 26px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	opacity: 0.8;
+	margin: 2px 1px;
+	cursor: pointer;
+	position: relative;
+	top: 50%;
+	left: 40%;
+}
+
+.clipboardbutton2 {
+	border: none;
+	color: white;
+	padding: 4px 15px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	opacity: 0.8;
+	cursor: pointer;
+	position: relative;
+	top: 50%;
+	left: 30%;
+}
+
+.clipboardbutton3 {
+	border: none;
+	color: white;
+	padding: 10px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	opacity: 0.8;
+	margin: 2px 1px;
+	font-size: 0.8em;
+	cursor: pointer;
 }
 
 .red {
-  background-color: red;
+	background-color: red;
 }
 
 .black {
-  background-color: black;
+	background-color: black;
 }
 
 .green {
-  background-color: green;
+	background-color: green;
+}
+
+.restartbutton1 {
+	position: absolute;
+	top: 70px;
+	right: 150px;
+	width: 100px;
+	height: 25px;
+	background-color: black;
+	z-index: 1000;
+	text-align: center;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px dotted black;
+}
+
+.restartbutton2 {
+	background-color: black;
+	border: none;
+	color: white;
+	padding: 5px 26px;
+	text-align: center;
+	text-decoration: none;
+	opacity: 0.8;
+	margin: 2px 300px;
+	cursor: pointer;
+	position: relative;
+	top: 50%;
+	left: 20%;
+}
+
+.restartbutton3 {
+	position: absolute;
+	top: 118px;
+	right: 150px;
+	width: 100px;
+	height: 25px;
+	background-color: black;
+	z-index: 1000;
+	text-align: center;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px dotted white;
+	padding: 15px 1px;
+}
+
+.restartbutton4 {
+	background-color: black;
+	border: none;
+	color: white;
+	padding: 5px 26px;
+	text-align: center;
+	text-decoration: none;
+	opacity: 0.8;
+	margin: 2px 1px;
+	cursor: pointer;
+	position: relative;
+	top: 50%;
+	left: 40%;
+}
+
+.platformbutton {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  opacity: 0.8;
+  margin: 2px 15px;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+.tectraverser {
+  text-align: center;
+  width: 100%;
+}
+
+.tectraverser a {
+  font-size: 30px;
 }
