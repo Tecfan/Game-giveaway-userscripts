@@ -3,3 +3,7 @@
 .tectable tr td:not(:first-of-type) { 
   font-weight: lighter;
 }
+
+.tectable tr:hover {
+  background-color: #4a4848;
+}
