@@ -102,6 +102,10 @@
 	background-color: green !important;
 }
 
+.blue {
+	background-color: blue !important;
+}
+
 .restartbutton1 {
 	position: absolute !important;
 	top: 70px !important;
