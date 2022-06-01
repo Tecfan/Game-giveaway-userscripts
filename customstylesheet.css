@@ -91,19 +91,19 @@
 }
 
 .red {
-	background-color: red !important;
+	background-color: red;
 }
 
 .black {
-	background-color: black !important;
+	background-color: black;
 }
 
 .green {
-	background-color: green !important;
+	background-color: green;
 }
 
 .blue {
-	background-color: blue !important;
+	background-color: blue;
 }
 
 .restartbutton1 {
