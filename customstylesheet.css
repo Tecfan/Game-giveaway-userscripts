@@ -204,3 +204,24 @@
 	outline: none !important;
 	border-radius: 0px !important;
 }
+
+.decrement {
+	cursor: pointer;
+	color: red;
+	border-color: red; 
+	margin-left: 1rem;
+	background-color: transparent;
+	border-width: 1px;
+	border-style: solid;
+	padding: 0.125em 1em;
+	margin-bottom: 1px;
+	line-height: 1.4375em;
+	border-radius: 3px;
+	appearance: button;
+	writing-mode: horizontal -tb !important;
+	text-rendering: auto;
+	display: inline-block;
+	align-items: flex-start;
+	box-sizing: border-box;
+	text-align: center;
+}
